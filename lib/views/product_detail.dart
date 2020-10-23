@@ -12,7 +12,9 @@ class ProductDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(product.title),
       ),
-      body: Container(),
+      body: Container(
+        child: Center(),
+      ),
     );
   }
 }
