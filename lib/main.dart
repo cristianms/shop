@@ -5,8 +5,10 @@ import 'package:shop/utils/app_routes.dart';
 import 'package:shop/views/product_detail.dart';
 import 'package:shop/views/products_overview_screen.dart';
 
+/// Ponto de entrada do aplicativo
 void main() => runApp(MyApp());
 
+/// Classe que representa o compoente principal do aplicativo
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,9 +17,10 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Minha Loja',
         theme: ThemeData(
-            primarySwatch: Colors.purple,
-            accentColor: Colors.deepOrange,
-            fontFamily: 'Lato'),
+          primarySwatch: Colors.purple,
+          accentColor: Colors.deepOrange,
+          fontFamily: 'Lato',
+        ),
         home: ProductsOverviewScreen(),
         routes: {
           AppRoutes.PRODUCT_DETAIL: (ctx) => ProductDetailScreen(),

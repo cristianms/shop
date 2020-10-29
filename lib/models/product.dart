@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 /// Classe que representa o objeto Produto
 class Product with ChangeNotifier {
@@ -9,6 +9,7 @@ class Product with ChangeNotifier {
   final double price;
   bool isFavorite;
 
+  /// Construtor
   Product({
     @required this.id,
     @required this.title,
@@ -21,5 +22,7 @@ class Product with ChangeNotifier {
   /// Alterna/inverte a flag de favorito
   void toggleFavorite() {
     isFavorite = !isFavorite;
+    // Notifica listeners deste provider
+    notifyListeners();
   }
 }
