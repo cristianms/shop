@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 
-class Product {
+/// Classe que representa o objeto Produto
+class Product with ChangeNotifier {
   final String id;
   final String title;
   final String description;
   final String imageUrl;
   final double price;
-  bool favorite;
+  bool isFavorite;
 
   Product({
     @required this.id,
@@ -14,6 +15,11 @@ class Product {
     @required this.description,
     @required this.imageUrl,
     @required this.price,
-    this.favorite = false,
+    this.isFavorite = false,
   });
+
+  /// Alterna/inverte a flag de favorito
+  void toggleFavorite() {
+    isFavorite = !isFavorite;
+  }
 }
