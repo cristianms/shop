@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop/models/product.dart';
+import 'package:shop/providers/product.dart';
 
 /// Tela utilizada para representar os detalhes do produto
 class ProductDetailScreen extends StatelessWidget {
